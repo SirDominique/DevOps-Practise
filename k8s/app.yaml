@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: 179901290133.dkr.ecr.us-west-2.amazonaws.com/devops
+          image: "179901290133.dkr.ecr.us-west-2.amazonaws.com/devops:IMAGE_TAG_PLACEHOLDER"
           ports:
             - containerPort: 80
           imagePullPolicy: Always
