@@ -35,8 +35,7 @@ jobs:
       uses: azure/setup-kubectl@v1
 
     - name: Load AWS EKS credentials
-      run: aws eks update-kubeconfig --name devops  --region us-west-2 # Change to your cluster name
-
+      run: aws eks update-kubeconfig --name dolycluster --region us-west-2 # Change to your cluster name
     - name: Update Deployment Image 
       run: |
         sed -i "s/IMAGE_TAG_PLACEHOLDER/${{ github.sha }}/g" ./k8s/app.yaml
